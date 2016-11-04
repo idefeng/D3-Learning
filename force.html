@@ -21,14 +21,15 @@
 
 		var edges = [{source: 0, target:1}, {source: 0, target: 2},
 					 {source: 0, target:3}, {source: 1, target: 4},
-					 {source: 1, target:5}, {source: 1, target: 6}];
+					 {source: 1, target:5}, {source: 1, target: 6},
+					 {source: 4, target:2}];
 
 		var force = d3.layout.force()
 				.nodes(nodes)
 				.links(edges)
 				.size([width, height])
 				.linkDistance(150)
-				.charge([-400]);
+				.charge([-200]);
 
 		force.start();
 
